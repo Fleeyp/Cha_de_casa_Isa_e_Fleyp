@@ -1,0 +1,24 @@
+<div class="app-container">
+  <app-header></app-header>
+
+  <main class="main-content">
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <app-filter-sidebar></app-filter-sidebar>
+      </aside>
+
+      <section class="gifts-grid">
+        @for (gift of giftService.filteredGifts(); track gift.id) {
+          <app-gift-card
+            [gift]="gift"
+            (togglePurchase)="giftService.togglePurchase($event)"
+          ></app-gift-card>
+        } @empty {
+          <div class="empty-state">
+            <p>Nenhum presente encontrado com os filtros selecionados.</p>
+          </div>
+        }
+      </section>
+    </div>
+  </main>
+</div>

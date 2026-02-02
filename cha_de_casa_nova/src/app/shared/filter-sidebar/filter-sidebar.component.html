@@ -1,0 +1,45 @@
+<div class="filter-card">
+  <h2 class="filter-title">Filtros</h2>
+
+  <div class="filter-section">
+    <h3 class="section-title">STATUS</h3>
+    <div class="filter-options">
+      <button
+        class="filter-button"
+        [class.active]="isStatusActive('all')"
+        (click)="onStatusChange('all')"
+      >
+        Todos ({{ giftService.totalGifts() }})
+      </button>
+      <button
+        class="filter-button"
+        [class.active]="isStatusActive('available')"
+        (click)="onStatusChange('available')"
+      >
+        Disponíveis ({{ giftService.availableGifts() }})
+      </button>
+      <button
+        class="filter-button"
+        [class.active]="isStatusActive('reserved')"
+        (click)="onStatusChange('reserved')"
+      >
+        Reservados ({{ giftService.reservedGifts() }})
+      </button>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <h3 class="section-title">PREÇO</h3>
+    <div class="filter-options">
+      @for (range of giftService.priceRanges; track range.label) {
+        <button
+          class="filter-button"
+          [class.active]="isPriceActive(range)"
+          (click)="onPriceChange(range)"
+        >
+          {{ range.label }}
+        </button>
+      }
+    </div>
+  </div>
+</div>
