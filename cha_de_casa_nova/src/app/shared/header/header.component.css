@@ -37,6 +37,13 @@
   border-radius: 0.75rem;
 }
 
+.dog-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
 @media (max-width: 768px) {
   .couple-photo {
     width: 160px;
