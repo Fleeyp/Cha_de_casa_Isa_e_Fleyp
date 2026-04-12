@@ -72,31 +72,6 @@
   margin: 0 0 1.25rem 0;
 }
 
-/* Dropdown */
-.dropdown-container {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.dropdown-trigger {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-  font-size: 0.9375rem;
-  color: #6b7280;
-  cursor: pointer;
-  transition: border-color 0.2s ease;
-}
-
-.dropdown-trigger:hover {
-  border-color: #8b9a7b;
-}
-
 .external-icon {
   width: 1rem;
   height: 1rem;
@@ -152,7 +127,6 @@
   color: #6b7280;
 }
 
-/* Reserve Button */
 .reserve-button {
   width: 100%;
   padding: 0.875rem 1.5rem;

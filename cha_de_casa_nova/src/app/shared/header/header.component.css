@@ -30,7 +30,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.couple-photo {
+.our-photo {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 768px) {
-  .couple-photo {
+  .our-photo {
     width: 160px;
     height: 160px;
   }

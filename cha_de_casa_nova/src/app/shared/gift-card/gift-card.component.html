@@ -18,43 +18,6 @@
 
   <p class="gift-price">{{ formatPrice(gift.price) }}</p>
 
-  <!-- Store Links Dropdown -->
-  <div class="dropdown-container" (clickOutside)="closeDropdown()">
-    <button class="dropdown-trigger" (click)="toggleDropdown()">
-      <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-        <polyline points="15,3 21,3 21,9"/>
-        <line x1="10" y1="14" x2="21" y2="3"/>
-      </svg>
-      <span>Ver onde comprar ({{ gift.links.length }} lojas)</span>
-      <svg 
-        class="chevron-icon" 
-        [class.rotated]="isDropdownOpen"
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        stroke-width="2"
-      >
-        <polyline points="6,9 12,15 18,9"/>
-      </svg>
-    </button>
-
-    @if (isDropdownOpen) {
-      <div class="dropdown-menu">
-        @for (link of gift.links; track link.store) {
-          <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="dropdown-item">
-            {{ link.store }}
-            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15,3 21,3 21,9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </a>
-        }
-      </div>
-    }
-  </div>
-
   <button 
     class="reserve-button" 
     [class.reserved]="gift.purchased"
