@@ -17,6 +17,6 @@ export class LoginComponent {
   constructor(private readonly router: Router) {}
 
   submit(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/lista']);
   }
 }
