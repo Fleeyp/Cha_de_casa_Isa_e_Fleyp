@@ -1,0 +1,43 @@
+<div class="login-page">
+  <header class="login-brand">
+    <h1 class="brand-title">Chá de casa nova de Isa e Fleyp</h1>
+    <p class="brand-subtitle">Estamos construindo nosso sonho juntos! ❤︎</p>
+  </header>
+
+  <div class="login-shell">
+    <div class="login-card">
+      <h2 class="card-title">Entrar</h2>
+
+      <p class="demo-notice">
+        Tela apenas ilustrativa: não há verificação de credenciais. Qualquer login e senha
+        levam à lista de presentes.
+      </p>
+
+      <form class="login-form" (ngSubmit)="submit()">
+        <label class="field">
+          <span class="field-label">Login</span>
+          <input
+            class="field-input"
+            type="text"
+            name="login"
+            [(ngModel)]="login"
+            autocomplete="username"
+          />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Senha</span>
+          <input
+            class="field-input"
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            autocomplete="current-password"
+          />
+        </label>
+
+        <button class="submit-button" type="submit">Continuar</button>
+      </form>
+    </div>
+  </div>
+</div>

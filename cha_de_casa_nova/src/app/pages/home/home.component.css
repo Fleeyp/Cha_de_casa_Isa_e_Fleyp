@@ -1,0 +1,61 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #d4d9c9;
+}
+
+.main-content {
+  padding: 2rem 1.5rem;
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: static;
+  }
+}
+
+.gifts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .gifts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .gifts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  color: #6b7280;
+}
